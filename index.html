@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
+    
     <title>Lonch Delivery | Restaurantes de Acapulco</title>
 </head>
 <body>
     <div class="container">
-    <header class="header">
+        
         <nav class="nav">
             <a href="#"><h2 id="logo">Lonch</h2></a>
             <ul>
@@ -20,19 +21,18 @@
                 <li><a class="link_menu" href="#">Sugerencias</a></li>
             </ul>
         </nav>
-        <main class="main">
-            <article class="img-lonch">
-                <img src="img/picasion.com_0c5fc817205037e9e0e1f8f1a825e9a2.gif" alt="App">
-            </article>
-            <article class="lonch">
-                <h1>Lonch Delivery</h1>
-                <h2>Comida al toque</h2>
-                <p>La aplicación para restaurantes y pedidos de comida que estabas esperando,</p> <p>por fin en Acapulco</p>
-                <a href="#">¡Vamos a Descargarla!</a>
-                <img id="store" src="img/google-play.png" alt="Play Store">
-            </article>
-        </main>
-    </header>
+    <main class="main">
+        <article class="img-lonch">
+            <img src="img/picasion.com_0c5fc817205037e9e0e1f8f1a825e9a2.gif" alt="App">
+        </article>
+        <article class="lonch">
+            <h1 class="title">Lonch Delivery</h1>
+            <h2 class="sub-title">Comida al toque</h2>
+            <p class="text">La aplicación para restaurantes y pedidos de comida que estabas esperando,</p> <p class="text"> <b>por fin en Acapulco</b></p>
+            <a class="btn" href="#">¡Vamos a Descargarla!</a>
+            <img id="store" src="img/google-play.png" alt="Play Store">
+        </article>
+    </main>
     <section class="restaurants">
          <h3>Restaurantes</h3>
          <p><strong>¿Quieres agregar tu restaurante? ¡Es completamente gratis!</strong></p>
@@ -50,15 +50,15 @@
             <textarea name="suggestion" cols="30" rows="10"></textarea>
             <input type="submit" value="Enviar">
         </form>
-        <div>
+        <div class="img-contact">
             <img src="img/undraw_delivery_address_03n0.svg" alt="Contact">
         </div>
         
     </section>
+    <footer class="footer">
+        <p>Copyright © 2020<strong>Lonch Delivery</strong></p>
+        <a href="#">Aviso de Privacidad</a>
+    </footer>
 </div>
-<footer class="footer">
-    <p>Copyright © 2020<strong>Lonch Delivery</strong></p>
-    <a href="#">Aviso de Privacidad</a>
-</footer>
 </body>
 </html>

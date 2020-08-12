@@ -1,0 +1,91 @@
+
+html{
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "navbar navbar navbar "
+    "main  main   main "
+    "restaurant restaurant  restaurant"  
+    "suggest suggest suggest "
+    "footer  footer  footer";
+
+}
+
+
+.header{
+    width: 100%;
+}
+
+
+.nav{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: navbar;
+
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+ul .link_menu{
+    text-decoration: none;
+    margin-right: 18px;
+    
+}
+.main{
+    grid-area: main;
+    display: flex;
+    padding: 60px 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.restaurants{
+    grid-area: restaurant;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggest{
+    grid-area: suggest;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggest .img-contact{
+    width: 55%;
+}
+
+.img-contact img{
+    width: 100%;
+}
+.suggest form{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+}

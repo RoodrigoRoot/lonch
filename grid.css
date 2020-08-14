@@ -1,6 +1,12 @@
 
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 .container{
@@ -14,45 +20,126 @@ html{
     "restaurant restaurant  restaurant"  
     "suggest suggest suggest "
     "footer  footer  footer";
-
 }
-
-
-.header{
-    width: 100%;
-}
-
 
 .nav{
-    padding: 10px;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     grid-area: navbar;
-
+    
 }
 
 .nav ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
 }
 
+.nav a{
+    text-decoration: none;
+}
+
+.nav #logo{
+    font-size: 2.8125rem;
+    font-weight: bold;
+    
+}
 
 ul .link_menu{
     text-decoration: none;
-    margin-right: 18px;
+    margin-right: 1.125rem;
+    font-weight: bold;
+    transition: border-bottom .2s ease-in-out;
     
 }
+
+ul .link_menu:hover{
+    border-bottom: 5px solid #FDCB6E;;
+}
+
+
 .main{
     grid-area: main;
     display: flex;
-    padding: 60px 0;
-    justify-content: center;
-    align-items: center;
+    padding: 60px 20px;
+    justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
+    background-color: #f2f2f2;
+    position: relative;
 }
 
+.img-lonch{
+    width: 25%;
+}
+
+.img-lonch img{
+    width: 100%;
+    border-radius: 21px;
+    height: 46.875rem;
+}
+
+.lonch{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title{
+    font-size: 5rem;
+    margin: 0;
+}
+
+.sub-title{
+    font-size: 3.75rem;
+    margin: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text{
+    font-size: 1.5625rem;
+    text-align: center;
+    
+}
+
+#wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn{
+    font-size: 1.5625rem;
+    text-decoration: none;
+    background-color: #FDCB6E;
+    padding: .8em;
+    border-radius: 42px;
+    width: 30%;
+    margin: 10px auto;
+    border: 0;
+    color: black;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #ddb161;
+}
+
+#store{
+    display: block;
+    width: 50%;
+    margin: 2.5rem auto;
+}
+
+
+/*Sección de Restaurantes*/
 .restaurants{
     grid-area: restaurant;
     display: flex;
@@ -61,31 +148,220 @@ ul .link_menu{
     padding: 60px 0;
     justify-content: center;
     align-items: center;
+    background-color: #FDCB6E;
 }
 
-.suggest{
-    grid-area: suggest;
+.title_restaurant{
+    font-size: 20px;
+}
+
+
+.icons{
     display: flex;
     flex-wrap: wrap;
-    padding: 60px 0;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.icons > div{
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
-.suggest .img-contact{
-    width: 55%;
+.social {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: black;
+}
+
+/*Sugerencia*/
+
+.suggest{
+    grid-area: suggest;
+    padding: 60px 0;
+    
+}
+
+.container_suggest{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container_suggest .img-contact{
+    width: 45%;
 }
 
 .img-contact img{
-    width: 100%;
+    width: 80%;
 }
 .suggest form{
+    
     display: flex;
     flex-direction: column;
+    width: 45%;
+    align-items: center;
+    
 }
 
+form input{
+    display: block;
+    text-align: center;
+    font-size: 1.375rem;
+    width: 60%;
+    margin: 20px 0;
+}
+
+form textarea{
+    resize: none;
+    width: 61%;
+    margin: 10px 0;
+}
+
+
 .footer{
+    padding: 10px 0;
     grid-area: footer;
     text-align: center;
+    background-color: #FDCB6E;
+}
+
+.policy{
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: black;
+    font-size: 1.125rem;
+}
+
+.text_footer{
+    margin:0px;
+}
+
+/*Media Query*/
+@media screen and (max-width: 860px){
+    html{
+        font-size: 14px;
+    }
+    .title_restaurant{
+        text-align: center;
+    }
+    
+    .img-lonch{
+        width: 50%;
+    }
+
+    #store{
+        margin-bottom:60px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    html{
+        font-size: 16px;
+    }
+
+    .img-lonch{
+        width: 35%;
+    }
+
+    .img-contact{
+        order: 1;
+    }
+
+    .btn{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px){
+    html{
+        font-size: 14px;
+    }
+
+    #wave{
+        display: none;
+    }
+
+    .restaurants{
+        padding: 60px 10px;
+    }
+
+    .suggest{
+        padding: 20px 0;
+    }
+    .container_suggest{
+        flex-direction: column;
+    }
+
+    .suggest form{
+        width: 60%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 550px){
+
+html{
+    font-size: 12px;
+}
+
+.main{
+    padding: 40px 0 ;
+    flex-direction: column;
+    align-items: center;
+}
+.lonch{
+    text-align: center;
+    width: 90%;
+}
+
+.img-lonch{
+    order: 1;
+    width: 80%;
+}
+
+.img-contact{
+    display: none;
+}
+
+.text{
+        margin: 10px 0 10px 0 ;
+}
+    ul  li {
+        margin: 5px;
+        
+    }
+
+    .nav #logo{
+        margin:10px;
+    }
+    .icons .social{
+        display: block;
+    }
+}
+
+@media screen and (max-width:450px){
+    html{
+        font-size: 12px;
+    }
+
+    .icons > div{
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .icons .social{
+        display: none;
+        
+    }
+    .suggest form{
+        width: 80%;
+    }
+    form input, form textarea{
+        width: 80%;
+    }
 }
